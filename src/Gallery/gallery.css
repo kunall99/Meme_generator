@@ -1,0 +1,8 @@
+.gallery{
+    min-height: 92vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background:#696969;
+}

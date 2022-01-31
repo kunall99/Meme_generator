@@ -1,23 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Header from "./Header/Header"
+import Content from "./Content/Content"
+import Gallery from "./Gallery/Gallery";
+import { useEffect, useState } from "react";
+var tempData = [];
 function App() {
+
+  let [memeArr, setmemeArr] = useState([]);
+  let [isCreate, setIsCreate] = useState(true);
+
+  useEffect(() => {
+
+    (async () => {
+      try {
+        let response = await fetch("https://api.imgflip.com/get_memes");
+        let data = await response.json();
+        let temparr = data.data.memes.map((el) => {
+          return {
+            id: el.id,
+            url: el.url
+          }
+        })
+        setmemeArr(temparr);
+      } catch (error) {
+        console.log(error);
+      }
+    })();
+
+  }, [])
+
+  const handleMemeData = (val) => {
+    tempData.push(val);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <div>
+      <Header setIsCreate={setIsCreate} />
+      {
+        (isCreate) && (memeArr.length != 0)? 
+        <Content memeArr={memeArr} handleMemeData={handleMemeData}/> : 
+        <Gallery tempData={tempData}/>
+      }
     </div>
   );
 }

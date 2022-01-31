@@ -1,0 +1,52 @@
+.gcard{
+    height: 35vh;
+    width: 17vw;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 0 5px 0 black;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.share{
+    height: 10%;
+    border-radius: 0 0 5px 5px;
+    width: 100%;
+    border: none;
+    background: green;
+    font-size: 15px;
+    color: white;
+}
+.share:hover{
+    cursor: pointer;
+}
+.gimg{
+    object-fit: fill;
+    height: 90%;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+.upperText{
+    position: absolute;
+    font-size: 2.5vh;
+    width: 12vw;
+    top: 0.5vh;
+    left: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0px 0px 10px black;
+    color: white;
+}
+.belowText{
+    position: absolute;
+    font-size: 2.5vh;
+    width: 12vw;
+    bottom: 4vh;
+    left: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0px 0px 10px black;
+    color: white;
+}   

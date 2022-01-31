@@ -1,0 +1,26 @@
+.header{
+    height: 8vh;
+    background: darkgrey;
+    display: flex;
+    border-bottom: 1px solid;
+}
+.header:hover{
+    cursor: pointer;
+}
+.create{
+    width: 50%;
+    display: flex;
+    font-size: 25px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid black;
+}
+.saved{
+    width: 50%;
+    display: flex;
+    font-size: 25px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}

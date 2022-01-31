@@ -1,0 +1,51 @@
+.button{
+    height: 7%;
+    position: relative;
+    top: 1vh;
+    display: inline-block;
+    width: 20vw;
+    left: 30vw;
+    margin-top: 4vh;
+    margin-left: 0.5vw;
+}
+.prev_btn{
+    width: 90%;
+    height: 100%;
+    border-radius: 10px;
+    border: none;
+    background: darkgreen;
+    color: white;
+    margin-right: 7px;
+    margin-left: 5px;
+    font-size: 20px;
+}
+.prev_btn:hover{
+    cursor: pointer;
+}
+.next_btn{
+    width: 90%;
+    height: 100%;
+    border-radius: 10px;
+    border: none;
+    background: blue;
+    color: white;
+    margin-left: 7px;
+    font-size: 20px;
+}
+.next_btn:hover{
+    cursor: pointer;
+}
+.save_btn{
+    width: 150%;
+    height: 100%;
+    border-radius: 10px;
+    border: none;
+    background: darkgreen;
+    color: white;
+    font-size: 20px;
+    margin-left: 5vw;
+    margin-top: 3vh;
+}
+.save_btn:hover{
+    cursor: pointer;
+}

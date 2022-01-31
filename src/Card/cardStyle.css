@@ -1,0 +1,38 @@
+.card{
+    position: relative;
+    top: 5vh;
+    height: 50%;
+    width: 40%;
+    left: 30vw;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px 1px black;
+}
+img{
+    object-fit: fill;
+    height: 100%;
+    width: 100%;
+}
+.upper_text{
+    position: absolute;
+    font-size: 4vh;
+    top: 0.5vh;
+    left: 5vw;
+    width: 28vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0px 0px 10px black;
+    color: white;
+}
+.below_text{
+    position: absolute;
+    font-size: 4vh;
+    bottom: 0.5vh;
+    left: 5vw;
+    width: 28vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0px 0px 10px black;
+    color: white;
+}
