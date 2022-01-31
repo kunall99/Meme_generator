@@ -7,6 +7,7 @@ function App() {
 
   let [memeArr, setmemeArr] = useState([]);
   let [isCreate, setIsCreate] = useState(true);
+  let [index, setIndex] = useState(0);
 
   useEffect(() => {
 
@@ -38,7 +39,7 @@ function App() {
       <Header setIsCreate={setIsCreate} />
       {
         (isCreate) && (memeArr.length != 0)? 
-        <Content memeArr={memeArr} handleMemeData={handleMemeData}/> : 
+        <Content memeArr={memeArr} handleMemeData={handleMemeData} index={index} setIndex={setIndex}/> : 
         <Gallery tempData={tempData}/>
       }
     </div>

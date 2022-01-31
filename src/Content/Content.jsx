@@ -5,7 +5,6 @@ import { useState } from "react"
 
 let Content = (props) => {
 
-    let [index, setIndex] = useState(0);
     let [upperText, setUpperText] = useState("");
     let [belowText, setBelowText] = useState("");
     let [isSave, setIsSave] = useState(false);
@@ -24,22 +23,22 @@ let Content = (props) => {
             />
             <Button 
                 value={"prev"} 
-                setIndex={setIndex} 
-                index={index}
+                setIndex={props.setIndex} 
+                index={props.index}
                 setUpperText={setUpperText}
                 setBelowText={setBelowText}
                 setIsSave={setIsSave}
             />
             <Button 
                 value={"next"} 
-                setIndex={setIndex} 
-                index={index}
+                setIndex={props.setIndex} 
+                index={props.index}
                 setUpperText={setUpperText}
                 setBelowText={setBelowText}
                 setIsSave={setIsSave}
             />
             <Card 
-                imgurl={props.memeArr[index].url}
+                imgurl={props.memeArr[props.index].url}
                 upperText={upperText}
                 belowText={belowText}
             />
@@ -49,7 +48,7 @@ let Content = (props) => {
             />
             {
                 (isSave ? 
-                    (props.handleMemeData({imageurl:props.memeArr[index].url,upperText,belowText})) : 
+                    (props.handleMemeData({imageurl:props.memeArr[props.index].url,upperText,belowText})) : 
                     (<></>)
                 )
             }
